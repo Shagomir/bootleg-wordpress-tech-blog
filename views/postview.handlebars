@@ -1,0 +1,22 @@
+{{> nav}}
+
+
+<div class="card" data_post_id="{{currentPost.id}}">
+    <a href="/posts/{{currentPost.id}}">
+        <header>{{currentPost.post_title}}</header>
+        <p>{{currentPost.post_text}}</p>
+        <p class="post_details">Created by
+            {{currentPost.user.username}}
+            on
+            {{format_date currentPost.createdAt}}
+            {{!-- {{#if updated_at}}
+            <p><br>last updated on {{formatDate updated_at}}</p>
+            {{/if}} --}}
+        </p>
+    </a>
+</div>
+
+
+{{#each currentPost.comments as |comment|}}
+{{> comment}}
+{{/each}}

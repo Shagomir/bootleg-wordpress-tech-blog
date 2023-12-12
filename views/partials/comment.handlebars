@@ -1,0 +1,10 @@
+<div class="card" data-comment-id="{{id}}">
+  <p>{{comment_text}}</p>
+  <p class="comment_details">{{user.commenter}}
+    -
+    {{format_date comment_created_at}}
+    {{!-- {{#if updated_at}}
+    <p><br>last updated on {{formatDate updated_at}}</p>
+    {{/if}} --}}
+  </p>
+</div>

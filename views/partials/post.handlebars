@@ -1,0 +1,14 @@
+<div class="card" data_post_id="{{id}}">
+  <a href="/posts/{{id}}">
+    <header>{{post_title}}</header>
+    <p>{{post_text}}</p>
+    <p class="post_details">Created by
+      {{user.username}}
+      on
+      {{format_date createdAt}}
+      {{!-- {{#if updated_at}}
+    <p><br>last updated on {{formatDate updated_at}}</p>
+    {{/if}} --}}
+    </p>
+  </a>
+</div>

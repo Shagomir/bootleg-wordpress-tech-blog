@@ -8,21 +8,29 @@ User.hasMany(Post, {
   foreignKey: "author_id",
 });
 
-// TODO: USER has many COMMENT
+Post.belongsTo(User,{
+  foreignKey: "author_id",
+});
+
+// // TODO: USER has many COMMENT
 
 User.hasMany(Comment, {
   foreignKey: "commentor_id",
   onDelete: "CASCADE",
 });
 
-// TODO: POST has many COMMENT
+Comment.belongsTo(User,{
+  foreignKey: "commentor_id",
+});
+
+// // TODO: POST has many COMMENT
 
 Post.hasMany(Comment, {
   foreignKey: "post_id",
   onDelete: "CASCADE",
 });
 
-// TODO: COMMENT has one POST
+// // TODO: COMMENT has one POST
 Comment.belongsTo(Post, {
   foreignKey: "post_id",
 });
